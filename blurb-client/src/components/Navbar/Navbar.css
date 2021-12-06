@@ -1,0 +1,46 @@
+.navbar {
+  display: grid;
+  background-color: var(--green-jungle);
+  color: var(--white);
+  padding: 2.2em 2.8em;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.navbar > div.one {
+  /* background-color: green; */
+  align-self: center;
+}
+.navbar > div.two {
+  text-align: center;
+  /* background-color: aqua; */
+  align-self: center;
+}
+.navbar > div.three {
+  text-align: right;
+  /* background-color: blue; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0.5em;
+  align-self: center;
+}
+.navbar > div.three > div:first-child {
+  background-color: burlywood;
+}
+
+.navbar > div.three > div:last-child {
+  /* background-color: lightpink; */
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .navbar {
+    padding: 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1.5em 1.2em;
+  }
+}

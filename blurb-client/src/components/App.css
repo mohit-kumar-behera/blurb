@@ -1,0 +1,66 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey: #eeeeee;
+  --lightgrey: #f7f7f7;
+
+  --green-jungle: #222823;
+  --green-metal: #122c34;
+  --green-spring: #2aeb7a;
+  --blue-sapphire: #0c6291;
+  --blue-french: #0072bb;
+  --blue-dodger: #1098f7;
+  --orange-red: #ff4000;
+  --orange-amber: #ff7f11;
+  --gray-web: #beb7a4;
+  --gray-davy: #575a5e;
+  --white-antique: #feefdd;
+
+  --font-nunito: 'Nunito', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-prompt: 'Prompt', sans-serif;
+  --font-raleway: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 2em;
+  font-family: var(--font-roboto);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+}
+
+/*
+  Breakpoints
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+*/
