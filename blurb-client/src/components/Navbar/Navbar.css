@@ -1,39 +1,35 @@
 .navbar {
   display: grid;
-  background-color: var(--green-jungle);
-  color: var(--white);
-  padding: 2.2em 2.8em;
   grid-template-columns: repeat(3, 1fr);
   font-family: 'Raleway', sans-serif;
+  padding: 2.2em 2.8em;
+  color: var(--white);
+  background-color: var(--green-jungle);
   text-transform: uppercase;
   overflow: hidden;
 }
-
-.navbar > div.one {
-  /* background-color: green; */
+.navbar > div {
   align-self: center;
 }
-.navbar > div.two {
+.navbar > div.left {
+}
+.navbar > div.middle {
   text-align: center;
-  /* background-color: aqua; */
-  align-self: center;
 }
-.navbar > div.three {
-  text-align: right;
-  /* background-color: blue; */
+.navbar > div.right {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 0.5em;
-  align-self: center;
+  text-align: right;
 }
-.navbar > div.three > div:first-child {
-  background-color: burlywood;
+.navlink {
+  padding: 0.7em 0.4em;
+  transition: all 0.3s linear;
+  border: 3px solid transparent;
 }
-
-.navbar > div.three > div:last-child {
-  /* background-color: lightpink; */
+.navlink:hover {
+  border-bottom: 3px solid white;
 }
-
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .navbar {
     padding: 1.5em;
