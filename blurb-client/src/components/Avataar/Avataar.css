@@ -1,0 +1,19 @@
+.avataar {
+  width: 35%;
+  height: 35%;
+  margin: auto;
+}
+.avataar.rounded,
+.avataar.rounded > .avataar__img {
+  border-radius: 50%;
+}
+.avataar__img {
+  width: 100%;
+  height: 100%;
+}
+.avataar__img.cover {
+  object-fit: cover;
+}
+.avataar__img.contain {
+  object-fit: contain;
+}
