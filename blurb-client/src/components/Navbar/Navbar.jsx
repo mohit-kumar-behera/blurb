@@ -34,7 +34,7 @@ const Navbar = () => {
           signup
         </Link> */}
         <Link to="/comp2" className="link navlink">
-          Logout
+          Log out
         </Link>
         <Link to="/comp3" className="link navlink">
           Mohit
