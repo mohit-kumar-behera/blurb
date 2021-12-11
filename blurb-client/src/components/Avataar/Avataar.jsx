@@ -1,20 +1,25 @@
 import React from 'react';
 
+import Image from './Image';
 import './Avataar.css';
 
-const Avataar = ({ avataar, img }) => {
+const Avataar = props => {
+  const avataar_classes = `avataar ${props.avataar_classes?.join(' ') || ''} ${
+    props.rounded ? 'rounded' : ''
+  }`;
+
+  const img_classes = [
+    'avataar__img',
+    ...(props.img_classes ? props.img_classes : []),
+  ];
+
   return (
-    <div
-      className={`avataar ${avataar.classes && avataar.classes.join(' ')} ${
-        avataar.rounded ? 'rounded' : ''
-      }`}
-    >
-      <img
-        src={img.src}
-        alt={img.alt}
-        className={`avataar__img ${img.classes && img.classes.join(' ')}${
-          img.cover ? 'cover' : 'contain'
-        }`}
+    <div className={avataar_classes} {...props.avataar_attributes}>
+      <Image
+        src={props.src}
+        alt={props.alt_text}
+        classes={img_classes}
+        attributes={props.img_attributes}
       />
     </div>
   );

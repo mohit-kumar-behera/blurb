@@ -15,15 +15,9 @@ const Navbar = () => {
       </div>
       <div className="middle">
         <Avataar
-          avataar={{
-            classes: ['navicon'],
-          }}
-          img={{
-            src: blurb_icon,
-            alt: 'blurb icon',
-            classes: [],
-            cover: false,
-          }}
+          src={blurb_icon}
+          alt_text="Blurb Logo"
+          avataar_classes={['navicon']}
         />
       </div>
       <div className="right">
