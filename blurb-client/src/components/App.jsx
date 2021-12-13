@@ -12,12 +12,17 @@ const P = () => {
   return 'P component P componentP component';
 };
 
+const NoMatch = () => {
+  return <h1>Error 404. Sorry, No Page Found</h1>;
+};
+
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<PageLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<P />} />
+        <Route path="*" element={<NoMatch />} />
       </Route>
     </Routes>
   );

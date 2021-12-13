@@ -1,13 +1,36 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const BlurbCard = props => {
+// import components
+import StretchLink from '../StretchLink';
+
+const BlurbCard = ({ blurb }) => {
   return (
     <div className="blurb-card">
       <div className="blurb-card__body">
-        <h2 className="title">{props.blurb.title}</h2>
+        {/* <StretchLink>
+          <Link
+            to={`blurb/${blurb.title.toLowerCase().replaceAll(' ', '-')}`}
+            className="title"
+          >
+            {blurb.title}
+          </Link>
+        </StretchLink> */}
+
+        <StretchLink
+          to={`blurb/${blurb.title.toLowerCase().replaceAll(' ', '-')}`}
+          className="title"
+        >
+          {blurb.title}
+        </StretchLink>
       </div>
       <div className="blurb-card__footer">
-        <small className="author">{props.blurb.user.name}</small>
+        <Link
+          to={`profile/${blurb.user.name.split(' ')[0].toLowerCase()}`}
+          className="author"
+        >
+          {blurb.user.name}
+        </Link>
       </div>
     </div>
   );

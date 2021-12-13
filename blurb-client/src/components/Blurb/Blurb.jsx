@@ -16,7 +16,7 @@ const blurbData = [
   },
   {
     id: Math.floor(Math.random() * 14575),
-    title: 'Shogun of Peace dshfdsiu idusgfiud fgiug',
+    title: 'Shogun of Peace dsiufis idsfi dsfi ',
     user: {
       name: 'Nettie Norman',
     },
@@ -37,7 +37,7 @@ const blurbData = [
   },
   {
     id: Math.floor(Math.random() * 14575),
-    title: 'Official of Agents',
+    title: 'Official of Agents dsf dsifg iudsgf iudsg fiudsg fiudfiug sdifug i',
     user: {
       name: 'Nellie Kelly',
     },
