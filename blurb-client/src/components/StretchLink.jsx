@@ -1,6 +1,8 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+
+// import stylesheets
+import './StretchLink.css';
 
 class StretchLink extends React.Component {
   stretchLinkRef = React.createRef(null);
