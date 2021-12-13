@@ -12,7 +12,7 @@ class PageLayout extends React.Component {
     return (
       <section id="page">
         <Navbar />
-        <div class="page-container">
+        <div className="page-container">
           <Outlet />
         </div>
       </section>

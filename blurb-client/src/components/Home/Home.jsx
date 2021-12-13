@@ -1,14 +1,8 @@
 import React from 'react';
 
 // import components
+import Blurb from '../Blurb/Blurb';
 
-// import stylesheets
-import './Home.css';
-
-class Home extends React.Component {
-  render() {
-    return 'gdfgdfg';
-  }
-}
+const Home = () => <Blurb />;
 
 export default Home;
