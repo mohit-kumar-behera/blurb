@@ -67,7 +67,7 @@ const blurbData = [
 
 class Blurb extends React.Component {
   renderBlurbs() {
-    return blurbData.map(blurb => <BlurbCard blurb={blurb} />);
+    return blurbData.map(blurb => <BlurbCard blurb={blurb} key={blurb.id} />);
   }
 
   render() {

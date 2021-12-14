@@ -18,8 +18,9 @@ class StretchLink extends React.Component {
     this.stretchLinkElem.style.padding = parentDivPadding;
   }
 
-  clickChildLink = () => {
-    this.stretchLinkElem.querySelector('.title').click();
+  clickChildLink = ev => {
+    if (ev.target.closest('a')) return;
+    this.stretchLinkElem.querySelector('a').click();
   };
 
   render() {
