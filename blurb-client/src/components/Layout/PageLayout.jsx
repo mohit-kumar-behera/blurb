@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 // import components
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 // import stylesheets
 import './PageLayout.css';
@@ -15,6 +16,7 @@ class PageLayout extends React.Component {
         <div className="page-container">
           <Outlet />
         </div>
+        <Footer />
       </section>
     );
   }

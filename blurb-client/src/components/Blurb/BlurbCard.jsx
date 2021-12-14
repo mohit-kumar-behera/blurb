@@ -8,15 +8,6 @@ const BlurbCard = ({ blurb }) => {
   return (
     <div className="blurb-card">
       <div className="blurb-card__body">
-        {/* <StretchLink>
-          <Link
-            to={`blurb/${blurb.title.toLowerCase().replaceAll(' ', '-')}`}
-            className="title"
-          >
-            {blurb.title}
-          </Link>
-        </StretchLink> */}
-
         <StretchLink
           to={`blurb/${blurb.title.toLowerCase().replaceAll(' ', '-')}`}
           className="title"

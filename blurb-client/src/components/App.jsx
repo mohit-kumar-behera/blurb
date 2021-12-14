@@ -4,16 +4,13 @@ import { Routes, Route } from 'react-router-dom';
 // import components
 import PageLayout from './Layout/PageLayout';
 import Home from './Home/Home';
+import NoMatch from './Error/NoMatch';
 
 // import stylesheets
 import './App.css';
 
 const P = () => {
   return 'P component P componentP component';
-};
-
-const NoMatch = () => {
-  return <h1>Error 404. Sorry, No Page Found</h1>;
 };
 
 const App = () => {

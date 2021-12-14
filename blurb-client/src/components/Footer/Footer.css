@@ -1,0 +1,8 @@
+footer {
+  width: 100%;
+  background-color: var(--green-jungle);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--white);
+  font-family: var(--font-roboto);
+}
