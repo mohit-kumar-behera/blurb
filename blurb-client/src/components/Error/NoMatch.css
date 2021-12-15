@@ -40,6 +40,30 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.error-action-btn {
+  margin-top: 1em;
+  padding: 1em 1.5em;
+  font-size: 1.02rem;
+  font-family: var(--font-roboto);
+  text-transform: capitalize;
+  font-weight: 800;
+  background-color: var(--blue-sapphire);
+  cursor: pointer;
+  color: var(--white);
+  border: 8px solid var(--blue-sapphire);
+  border-radius: 100px;
+  transition: all 0.2s ease;
+}
+.error-action-btn:hover {
+  border-color: var(--blue-french);
+  background-color: var(--blue-french);
+  transform: translate(2px, -4px);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.error-action-btn:active {
+  transform: translate(0, 0);
+}
+
 @media screen and (max-width: 768px) {
   .error-div {
     grid-template-columns: 1fr;

@@ -1,12 +1,19 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // import stylesheet
 import './NoMatch.css';
 
 const NoMatch = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = '404 Sorry, No Page Found';
   }, []);
+
+  const navigateTo = () => {
+    navigate('/', { replace: true });
+  };
 
   return (
     <div className="error-div">
@@ -14,6 +21,9 @@ const NoMatch = () => {
         <div className="error-div__content">
           <h1 className="error-code">404</h1>
           <h3 className="error-text">Sorry, Page Not Found</h3>
+          <button className="error-action-btn" onClick={navigateTo}>
+            Take Me Home
+          </button>
         </div>
       </div>
       <div className="error-div__right">
