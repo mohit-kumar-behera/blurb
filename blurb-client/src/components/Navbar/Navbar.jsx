@@ -12,11 +12,11 @@ const ProtectedNavLink = ({ auth, login, logout }) => {
   if (!auth.user)
     return (
       <>
-        <Link to="/comp2" className="link navlink">
+        <Link to="/auth/login" className="link navlink">
           Login
         </Link>
-        {/* <button onClick={() => login('Karan')}>Login</button> */}
-        <Link to="/comp3" className="link navlink">
+        <button onClick={() => login('Karan')}>Login</button>
+        <Link to="/auth/signup" className="link navlink">
           signup
         </Link>
       </>
@@ -28,7 +28,7 @@ const ProtectedNavLink = ({ auth, login, logout }) => {
         Log out
       </Link> */}
       <button onClick={() => logout()}>Logout</button>
-      <Link to="/comp3" className="link navlink">
+      <Link to="/auth/login" className="link navlink">
         {auth.user}
       </Link>
     </>
