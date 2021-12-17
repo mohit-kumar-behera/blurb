@@ -17,9 +17,9 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<PageLayout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<P />} />
-        <Route path="*" element={<NoMatch />} />
+        <Route index element={<Home title="Blurb" />} />
+        <Route path="about" element={<P title="test title" />} />
+        <Route path="*" element={<NoMatch title="Something went wrong" />} />
       </Route>
     </Routes>
   );

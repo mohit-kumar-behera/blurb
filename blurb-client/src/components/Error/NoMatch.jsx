@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
+// import custom hooks
+import useDocumentTitle from '../../CustomHook/useDocumentTitle';
 
 // import stylesheet
 import './NoMatch.css';
 
-const NoMatch = () => {
+const NoMatch = props => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.title = '404 Sorry, No Page Found';
-  }, []);
+  useDocumentTitle(props.title);
 
   const navigateTo = () => {
     navigate('/', { replace: true });
