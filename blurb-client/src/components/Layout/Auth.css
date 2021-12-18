@@ -52,10 +52,16 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 4px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.user-input.error {
+/* .user-input.error {
   border-color: var(--orange-red);
 }
 .user-input.no-error {
+  border-color: var(--green-spring);
+} */
+.user-input[data-error='true'] {
+  border-color: var(--orange-red);
+}
+.user-input[data-error='false'] {
   border-color: var(--green-spring);
 }
 .error-label {
@@ -63,6 +69,7 @@
   font-weight: 800;
   color: var(--orange-red);
   visibility: hidden;
+  opacity: 0.6;
 }
 .error-label.show {
   visibility: visible;
@@ -86,10 +93,12 @@
   outline: 5px solid transparent;
   transition: all 0.3s ease;
 }
-.form-action-btn:hover,
-.form-action-btn:focus {
+.form-action-btn:hover {
   outline-offset: 4px;
   outline-color: var(--orange-red);
+}
+.form-action-btn:active {
+  transform: scale(0.9);
 }
 @media screen and (min-width: 1400px) {
   .form-wrapper {
