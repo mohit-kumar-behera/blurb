@@ -32,8 +32,15 @@ const FormField = formProps => {
   const { input: inputProps, meta, type, label } = formProps;
 
   const renderInput = (inputType, meta) => {
+    console.log(meta);
+    const { error, touched } = meta;
     const fakeInput = Object.assign({}, inputComponents[inputType]);
-    fakeInput.props = { ...fakeInput.props, ...inputProps };
+
+    fakeInput.props = {
+      ...fakeInput.props,
+      ...inputProps,
+      dataerror: touched ? (error ? 'true' : 'false') : '',
+    };
     return fakeInput;
   };
 

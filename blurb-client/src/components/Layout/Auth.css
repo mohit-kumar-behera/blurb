@@ -58,10 +58,10 @@
 .user-input.no-error {
   border-color: var(--green-spring);
 } */
-.user-input[data-error='true'] {
+.user-input[dataerror='true'] {
   border-color: var(--orange-red);
 }
-.user-input[data-error='false'] {
+.user-input[dataerror='false'] {
   border-color: var(--green-spring);
 }
 .error-label {
