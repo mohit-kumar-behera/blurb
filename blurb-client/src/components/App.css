@@ -40,7 +40,7 @@ body {
 *::after {
   box-sizing: border-box;
 }
-*:focus {
+*:focus:not(.user-input) {
   outline: 0 !important;
   box-shadow: 0 0 0 0.2rem var(--white) !important;
 }
@@ -90,4 +90,14 @@ a:active {
   lg: 992px,
   xl: 1200px,
   xxl: 1400px
+*/
+
+/*
+@media screen and (min-width: 1400px) {}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {}
+@media screen and (min-width: 992px) and (max-width: 1200px) {}
+@media screen and (min-width: 768px) and (max-width: 992px) {}
+@media screen and (min-width: 576px) and (max-width: 768px) {}
+@media screen and (min-width: 372px) and (max-width: 576px) {}
+@media screen and (max-width: 372px) {}
 */

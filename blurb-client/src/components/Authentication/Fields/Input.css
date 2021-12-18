@@ -1,0 +1,10 @@
+input {
+  padding: 0.8rem;
+  font-family: var(--font-nunito);
+  font-size: 1rem;
+  border: 1px solid var(--gray-davy);
+  border-radius: 3px;
+}
+input:focus {
+  outline: none;
+}

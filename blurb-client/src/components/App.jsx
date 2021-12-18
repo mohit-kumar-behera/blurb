@@ -25,8 +25,8 @@ const App = () => {
 
         <Route path="auth" element={<AuthPageLayout />}>
           <Route index element={<Navigate to="login" />} />
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Signup />} />
+          <Route path="login" element={<Login title="Login | Blurb" />} />
+          <Route path="signup" element={<Signup title="Signup | Blurb" />} />
         </Route>
 
         <Route path="*" element={<NoMatch title="Something went wrong" />} />

@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Signup = () => {
+// import custom hooks
+import useDocumentTitle from '../../CustomHook/useDocumentTitle';
+
+const Signup = props => {
+  useDocumentTitle(props.title);
+
   return <h2>Signup Page</h2>;
 };
 
