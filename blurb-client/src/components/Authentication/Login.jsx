@@ -1,77 +1,25 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
-// import components
-import Input from './Fields/Input';
-
 // import custom hooks
 import useDocumentTitle from '../../CustomHook/useDocumentTitle';
 
-const inputComponents = {
-  email: (
-    <Input
-      type="email"
-      placeholder="johndoe567@gmail.com"
-      className="user-input"
-      spellCheck="false"
-      required
-    />
-  ),
-  password: (
-    <Input
-      type="password"
-      placeholder="************"
-      className="user-input"
-      spellCheck="false"
-      required
-    />
-  ),
-};
+// import components
+import FormField from './Fields/FormField';
 
-const FormField = formProps => {
-  const { input: inputProps, meta, type, label } = formProps;
-
-  const renderInput = (inputType, meta) => {
-    console.log(meta);
-    const { error, touched } = meta;
-    const fakeInput = Object.assign({}, inputComponents[inputType]);
-
-    fakeInput.props = {
-      ...fakeInput.props,
-      ...inputProps,
-      dataerror: touched ? (error ? 'true' : 'false') : '',
-    };
-    return fakeInput;
-  };
-
-  const renderError = ({ error, touched }) => {
-    let errorObj = { errMsg: '', errCls: '' };
-
-    if (touched && error)
-      errorObj = { ...errorObj, errMsg: error, errCls: 'show' };
-    else errorObj = { ...errorObj, errMsg: '', errCls: '' };
-
-    return (
-      <small className={`error-label ${errorObj.errCls}`}>
-        {errorObj.errMsg}
-      </small>
-    );
-  };
-
-  return (
-    <div className="form-field">
-      <label className="label">{label}</label>
-      {renderInput(type.toLowerCase(), meta)}
-      {renderError(meta)}
-    </div>
-  );
-};
+// import validators
+import emailPasswordValidation from './Validators/emailPassword';
 
 const Login = props => {
   useDocumentTitle(props.title);
 
   const submitHandler = formValues => {
-    console.log('values', formValues);
+    // Check if values isn't empty for some fields
+    Object.entries(formValues).forEach(([_, value]) => {
+      if (!value) return;
+    });
+
+    console.log(formValues);
   };
 
   return (
@@ -106,15 +54,7 @@ const Login = props => {
 
 const validate = formValues => {
   const errors = {};
-  const requiredFields = ['email', 'password'];
-
-  requiredFields.forEach(requiredField => {
-    if (!formValues[requiredField])
-      errors[
-        requiredField
-      ] = `${requiredField.toUpperCase()} field can't be left empty.`;
-  });
-
+  emailPasswordValidation(formValues, errors);
   return errors;
 };
 
