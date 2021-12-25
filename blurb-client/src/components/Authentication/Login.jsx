@@ -1,5 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 // import custom hooks
 import useDocumentTitle from '../../CustomHook/useDocumentTitle';
@@ -10,7 +12,15 @@ import FormField from './Fields/FormField';
 // import validators
 import emailPasswordValidation from './Validators/emailPassword';
 
+// import actions
+import { login } from '../../redux/actions/authAction';
+
 const Login = props => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let fromPage = location.state?.from?.pathname || '/';
+
   useDocumentTitle(props.title);
 
   const submitHandler = formValues => {
@@ -19,7 +29,11 @@ const Login = props => {
       if (!value) return;
     });
 
-    console.log(formValues);
+    let fakeUsername = formValues.email.split('@')[0];
+
+    props.login(fakeUsername);
+
+    navigate(fromPage, { replace: true });
   };
 
   return (
@@ -58,7 +72,9 @@ const validate = formValues => {
   return errors;
 };
 
-export default reduxForm({
+const FormComponentWrapped = reduxForm({
   form: 'LoginForm',
   validate,
 })(Login);
+
+export default connect(null, { login })(FormComponentWrapped);

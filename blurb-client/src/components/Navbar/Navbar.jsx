@@ -6,16 +6,15 @@ import Avataar from '../Avataar/Avataar';
 import blurb_icon from '../../static/blurb-icon.png';
 import './Navbar.css';
 
-import { login, logout } from '../../redux/actions/authAction';
+import { logout } from '../../redux/actions/authAction';
 
-const ProtectedNavLink = ({ auth, login, logout }) => {
+const ProtectedNavLink = ({ auth, logout }) => {
   if (!auth.user)
     return (
       <>
         <Link to="/auth/login" className="link navlink">
           Login
         </Link>
-        <button onClick={() => login('Karan')}>Login</button>
         <Link to="/auth/signup" className="link navlink">
           signup
         </Link>
@@ -28,7 +27,7 @@ const ProtectedNavLink = ({ auth, login, logout }) => {
         Log out
       </Link> */}
       <button onClick={() => logout()}>Logout</button>
-      <Link to="/auth/login" className="link navlink">
+      <Link to={`user/${auth.user}`} className="link navlink">
         {auth.user}
       </Link>
     </>
@@ -51,11 +50,7 @@ const Navbar = props => {
         />
       </div>
       <div className="right">
-        <ProtectedNavLink
-          auth={props.auth}
-          login={props.login}
-          logout={props.logout}
-        />
+        <ProtectedNavLink auth={props.auth} logout={props.logout} />
       </div>
     </nav>
   );
@@ -67,4 +62,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { login, logout })(Navbar);
+export default connect(mapStateToProps, { logout })(Navbar);
