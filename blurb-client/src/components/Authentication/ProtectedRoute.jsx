@@ -1,16 +1,26 @@
 import { Navigate, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const ProtectedRoute = ({ auth, children }) => {
+import { addMessage } from '../../redux/actions/messageAction';
+
+const ProtectedRoute = ({ auth, children, addMessage }) => {
   const location = useLocation();
 
-  if (!auth.user)
+  if (!auth.user) {
+    // Attach Message
+    const message = {
+      id: Date.now(),
+      content: 'Please Login to your account to access Profile Page',
+    };
+    addMessage(message);
+
     return (
       <Navigate
         to={`/auth/login/?next=${location.pathname}`}
         state={{ from: location }}
       />
     );
+  }
 
   return children;
 };
@@ -21,4 +31,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(ProtectedRoute);
+export default connect(mapStateToProps, { addMessage })(ProtectedRoute);
