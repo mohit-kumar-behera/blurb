@@ -11,9 +11,15 @@ import FormField from './Fields/FormField';
 
 // import validators
 import emailPasswordValidation from './Validators/emailPassword';
+import requiredFieldValidation from './Validators/requiredField';
 
 // import actions
 import { login } from '../../redux/actions/authAction';
+
+const actionBtnWrapperStyle = {
+  display: 'flex',
+  justifyContent: 'end',
+};
 
 const Login = props => {
   const navigate = useNavigate();
@@ -56,9 +62,9 @@ const Login = props => {
           label="Password"
           type="password"
         />
-        <div className="form-field">
+        <div className="form-field" style={actionBtnWrapperStyle}>
           <button type="submit" className="form-action-btn">
-            Login
+            Log in
           </button>
         </div>
       </form>
@@ -68,7 +74,9 @@ const Login = props => {
 
 const validate = formValues => {
   const errors = {};
-  emailPasswordValidation(formValues, errors);
+  const requiredFields = ['email', 'password'];
+  requiredFieldValidation(requiredFields, formValues, errors);
+  // emailPasswordValidation(formValues, errors);
   return errors;
 };
 

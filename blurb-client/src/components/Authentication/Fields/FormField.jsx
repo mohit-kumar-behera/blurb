@@ -7,14 +7,14 @@ const FormField = formProps => {
 
   const renderInput = (inputType, meta) => {
     const { error, touched } = meta;
-    const fakeInput = Object.assign({}, inputComponents[inputType]);
+    const cloneInput = Object.assign({}, inputComponents[inputType]);
 
-    fakeInput.props = {
-      ...fakeInput.props,
+    cloneInput.props = {
+      ...cloneInput.props,
       ...inputProps,
       dataerror: touched ? (error ? 'true' : 'false') : '',
     };
-    return fakeInput;
+    return cloneInput;
   };
 
   const renderError = ({ error, touched }) => {
