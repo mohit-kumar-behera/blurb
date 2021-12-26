@@ -6,6 +6,7 @@ import PageLayout from './Layout/PageLayout';
 import AuthPageLayout from './Layout/AuthPageLayout';
 import ProtectedRoute from './Authentication/ProtectedRoute';
 import Login from './Authentication/Login';
+import Logout from './Authentication/Logout';
 import Signup from './Authentication/Signup';
 import Home from './Home/Home';
 import NoMatch from './Error/NoMatch';
@@ -42,6 +43,15 @@ const App = () => {
           <Route path="login" element={<Login title="Login | Blurb" />} />
           <Route path="signup" element={<Signup title="Signup | Blurb" />} />
         </Route>
+
+        <Route
+          path="auth/logout"
+          element={
+            <ProtectedRoute>
+              <Logout />
+            </ProtectedRoute>
+          }
+        />
 
         <Route
           path="user/:username"

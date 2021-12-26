@@ -48,3 +48,4 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, { addMessage })(PageLayout);
+// export default connect(mapStateToProps)(PageLayout);

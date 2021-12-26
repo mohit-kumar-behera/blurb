@@ -19,7 +19,7 @@ class MessageModal extends React.Component {
   constructor(props) {
     super(props);
     this.messageModalEl = document.createElement('div');
-    this.messageModalEl.className = 'message-modal';
+    this.messageModalEl.className = 'modal message-modal';
   }
 
   addTimer = sec =>

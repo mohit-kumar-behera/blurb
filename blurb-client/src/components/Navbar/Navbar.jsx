@@ -2,10 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+// import components
 import Avataar from '../Avataar/Avataar';
+
+// import images
 import blurb_icon from '../../static/blurb-icon.png';
+
+// import stylesheets
 import './Navbar.css';
 
+// import actions
 import { logout } from '../../redux/actions/authAction';
 
 const ProtectedNavLink = ({ auth, logout }) => {
@@ -23,10 +29,10 @@ const ProtectedNavLink = ({ auth, logout }) => {
 
   return (
     <>
-      {/* <Link to="/comp2" className="link navlink">
+      <Link to="/auth/logout" className="link navlink">
         Log out
-      </Link> */}
-      <button onClick={() => logout()}>Logout</button>
+      </Link>
+      {/* <button onClick={() => logout()}>Logout</button> */}
       <Link to={`user/${auth.user}`} className="link navlink">
         {auth.user}
       </Link>
