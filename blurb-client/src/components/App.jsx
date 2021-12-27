@@ -102,7 +102,16 @@ const App = () => {
         <Route path="profile/:username" element={<ProfileLayout />}>
           <Route index element={<A />} />
           <Route path="blurb" element={<B />} />
-          <Route path="settings" element={<C />} />
+          <Route
+            path="settings"
+            element={
+              <ProtectedRoute>
+                <ProtectedUserRoute>
+                  <C />
+                </ProtectedUserRoute>
+              </ProtectedRoute>
+            }
+          />
         </Route>
 
         <Route path="*" element={<NoMatch title="Something went wrong" />} />

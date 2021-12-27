@@ -34,7 +34,7 @@ const BlurbNavigation = () => {
       </div>
       <div className="modify-detail-wrapper">
         <ProtectedComponent>
-          <ProtectedUserComponent createdByUser="mohit">
+          <ProtectedUserComponent componentByUser="mohit">
             <div>
               <Link to="" className="modify-info__link">
                 <strong>View Blurb Detail</strong>

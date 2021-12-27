@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
-const ProtectedUserComponent = ({ auth, children, createdByUser }) => {
-  if (createdByUser !== auth.user) return null;
+const ProtectedUserComponent = ({ auth, children, componentByUser }) => {
+  if (componentByUser !== auth.user) return null;
   return children;
 };
 

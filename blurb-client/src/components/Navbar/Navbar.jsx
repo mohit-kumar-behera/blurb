@@ -29,7 +29,7 @@ const ProtectedNavLink = ({ auth }) => {
       <Link to="/auth/logout" className="link navlink">
         Log out
       </Link>
-      <Link to={`profile/${auth.user}`} className="link navlink">
+      <Link to={`profile/${auth.user}/`} className="link navlink">
         {auth.user}
       </Link>
     </>

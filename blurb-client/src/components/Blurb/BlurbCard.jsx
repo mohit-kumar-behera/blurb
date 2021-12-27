@@ -17,7 +17,7 @@ const BlurbCard = ({ blurb }) => {
       </div>
       <div className="blurb-card__footer">
         <Link
-          to={`profile/${blurb.user.name.split(' ')[0].toLowerCase()}`}
+          to={`profile/${blurb.user.name.split(' ')[0].toLowerCase()}/`}
           className="author"
         >
           {blurb.user.name}
