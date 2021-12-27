@@ -1,8 +1,8 @@
 import { LOGIN, LOGOUT } from '../actions/actionTypes';
 
 const INITIAL_STATE = {
-  user: null,
-  // user: 'mohit',
+  // user: null,
+  user: 'mohit',
 };
 
 const authReducer = (state = INITIAL_STATE, action) => {

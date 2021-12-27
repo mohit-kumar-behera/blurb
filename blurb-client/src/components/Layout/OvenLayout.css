@@ -16,7 +16,7 @@
   overflow-y: auto;
 }
 .oven-layout__left {
-  background-color: var(--blue-dodger);
+  background-color: var(--blue-dodger); /* Fallback Background */
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   color: var(--white);

@@ -1,3 +1,4 @@
+/* BLURB LIST VIEW */
 .blurb-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -5,7 +6,6 @@
   padding: 0.25em;
   margin: 2.5rem 0;
 }
-
 .blurb-card {
   display: flex;
   flex-direction: column;
@@ -15,12 +15,10 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
     var(--green-metal) 0px 0px 0px 3px;
 }
-
 .blurb-card__body,
 .blurb-card__footer > .author {
   transition: all 0.2s ease;
 }
-
 .blurb-card__body {
   height: 100%;
   padding: 3.5em 1.5em;
@@ -30,11 +28,9 @@
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
-
 .blurb-card__body:hover {
   background-color: var(--white-antique-opac-l);
 }
-
 .blurb-card__body .title {
   font-size: 1.45rem;
   font-weight: 700;
@@ -44,7 +40,6 @@
   word-spacing: 2px;
   text-transform: capitalize;
 }
-
 .blurb-card__footer {
   padding: 0.7em 0.4em;
   border-bottom-left-radius: inherit;
@@ -52,7 +47,6 @@
   background-color: var(--green-metal);
   clear: both;
 }
-
 .blurb-card__footer > .author {
   float: right;
   color: var(--grey);
@@ -61,11 +55,9 @@
   font-style: italic;
   letter-spacing: 1.4px;
 }
-
 .blurb-card__footer > .author:hover {
   color: var(--white-antique);
 }
-
 @media screen and (min-width: 1400px) {
   .blurb-wrapper {
     grid-template-columns: repeat(4, 1fr);
@@ -85,4 +77,49 @@
   .blurb-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* BLURB DETAIL VIEW */
+.blurb-navigation {
+  padding: 4rem 0.7rem;
+  /* background: lightgreen; */
+  text-align: center;
+}
+.blurb-navigation > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.blurb-navigation > * > *:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+.blurb-navicon {
+  width: 65px;
+  height: 65px;
+}
+.blurb-navigation > .avataar-wrapper {
+  padding: 0.3rem 0 0 0;
+}
+.datetime-info,
+.modify-info {
+  display: flex;
+  justify-content: space-around;
+  color: var(--lightgrey);
+  font-family: var(--font-raleway);
+}
+.datetime-info > small {
+  display: flex;
+  flex-direction: column;
+}
+.modify-info {
+  border-top: 5px solid var(--white);
+  padding-top: 1.8rem;
+}
+.modify-info__link {
+  transform: translate(0, 0);
+  transition: all 0.3s ease;
+  color: var(--white);
+}
+.modify-info__link:hover {
+  transform: translate(1px, -1px);
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }

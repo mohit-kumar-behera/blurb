@@ -11,10 +11,7 @@ import blurb_icon from '../../static/blurb-icon.png';
 // import stylesheets
 import './Navbar.css';
 
-// import actions
-import { logout } from '../../redux/actions/authAction';
-
-const ProtectedNavLink = ({ auth, logout }) => {
+const ProtectedNavLink = ({ auth }) => {
   if (!auth.user)
     return (
       <>
@@ -32,7 +29,6 @@ const ProtectedNavLink = ({ auth, logout }) => {
       <Link to="/auth/logout" className="link navlink">
         Log out
       </Link>
-      {/* <button onClick={() => logout()}>Logout</button> */}
       <Link to={`user/${auth.user}`} className="link navlink">
         {auth.user}
       </Link>
@@ -68,4 +64,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { logout })(Navbar);
+export default connect(mapStateToProps)(Navbar);
