@@ -113,13 +113,17 @@
   border-top: 5px solid var(--white);
   padding-top: 1.8rem;
 }
+.modify-info > *:not(:last-child) {
+  margin-right: 0.2rem;
+}
 .modify-info__link {
   transform: translate(0, 0);
   transition: all 0.3s ease;
-  color: var(--white);
+  color: var(--green-light);
 }
 .modify-info__link:hover {
-  transform: translate(1px, -1px);
+  color: var(--white);
+  transform: translate(2px, -2px);
   text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }

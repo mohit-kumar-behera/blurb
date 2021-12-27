@@ -10,6 +10,9 @@ import Login from './Authentication/Login';
 import Logout from './Authentication/Logout';
 import Signup from './Authentication/Signup';
 import Home from './Home/Home';
+import BlurbDetail from './Blurb/BlurbDetail';
+import BlurbEdit from './Blurb/BlurbEdit';
+import BlurbDelete from './Blurb/BlurbDelete';
 import NoMatch from './Error/NoMatch';
 
 // import stylesheets
@@ -72,7 +75,9 @@ const App = () => {
         />
 
         <Route path="blurb/:slug" element={<BlurbDetailLayout />}>
-          <Route index element={<Right />} />
+          <Route index element={<BlurbDetail title="Blurb" />} />
+          <Route path="edit" element={<BlurbEdit title="Edit Blurb" />} />
+          <Route path="delete" element={<BlurbDelete title="Delete Blurb" />} />
         </Route>
 
         <Route
