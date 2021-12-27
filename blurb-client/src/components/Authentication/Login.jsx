@@ -76,7 +76,7 @@ const validate = formValues => {
   const errors = {};
   const requiredFields = ['email', 'password'];
   requiredFieldValidation(requiredFields, formValues, errors);
-  // emailPasswordValidation(formValues, errors);
+  emailPasswordValidation(formValues, errors);
   return errors;
 };
 

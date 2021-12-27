@@ -28,7 +28,7 @@ class PageLayout extends React.Component {
       <section id="page">
         <Navbar />
 
-        <button onClick={this.handleAddMessage}>ADD MESSAGE</button>
+        {/* <button onClick={this.handleAddMessage}>ADD MESSAGE</button> */}
 
         <div className="page-container">
           <Outlet />

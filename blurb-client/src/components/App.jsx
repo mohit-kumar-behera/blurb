@@ -4,6 +4,7 @@ import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 // import components
 import PageLayout from './Layout/PageLayout';
 import AuthPageLayout from './Layout/AuthPageLayout';
+import BlurbDetailLayout from './Layout/BlurbDetailLayout';
 import ProtectedRoute from './Authentication/ProtectedRoute';
 import Login from './Authentication/Login';
 import Logout from './Authentication/Logout';
@@ -31,6 +32,23 @@ const B = () => {
   return 'Create Blurb';
 };
 
+const Layout = () => {
+  return (
+    <>
+      <h1>Layout</h1>
+      <Outlet />
+    </>
+  );
+};
+
+const Left = () => {
+  return <h1>Left</h1>;
+};
+
+const Right = () => {
+  return <h1>Right</h1>;
+};
+
 const App = () => {
   return (
     <Routes>
@@ -52,6 +70,10 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+
+        <Route path="blurb/:slug" element={<BlurbDetailLayout />}>
+          <Route index element={<Right />} />
+        </Route>
 
         <Route
           path="user/:username"
