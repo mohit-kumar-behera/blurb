@@ -6,6 +6,7 @@ import PageLayout from './Layout/PageLayout';
 import AuthPageLayout from './Layout/AuthPageLayout';
 import BlurbDetailLayout from './Layout/BlurbDetailLayout';
 import ProtectedRoute from './Authentication/ProtectedRoute';
+import ProtectedUserRoute from './Authentication/ProtectedUserRoute';
 import Login from './Authentication/Login';
 import Logout from './Authentication/Logout';
 import Signup from './Authentication/Signup';
@@ -29,28 +30,27 @@ const P = () => {
 };
 
 const A = () => {
-  return 'index compoennt';
+  return <h1>My Profile</h1>;
 };
 
 const B = () => {
-  return 'Create Blurb';
+  return <h1>My Blurbs</h1>;
 };
 
-const Layout = () => {
-  return (
-    <>
-      <h1>Layout</h1>
-      <Outlet />
-    </>
-  );
+const C = () => {
+  return <h1>My Settings</h1>;
 };
 
-const Left = () => {
-  return <h1>Left</h1>;
+const D = () => {
+  return <h1></h1>;
 };
 
-const Right = () => {
-  return <h1>Right</h1>;
+const E = () => {
+  return <h1></h1>;
+};
+
+const F = () => {
+  return <h1></h1>;
 };
 
 const App = () => {
@@ -77,13 +77,32 @@ const App = () => {
 
         <Route path="blurb/:slug" element={<BlurbDetailLayout />}>
           <Route index element={<BlurbDetail title="Blurb" />} />
-          <Route path="edit" element={<BlurbEdit title="Edit Blurb" />} />
-          <Route path="delete" element={<BlurbDelete title="Delete Blurb" />} />
+          <Route
+            path="edit"
+            element={
+              <ProtectedRoute>
+                <ProtectedUserRoute>
+                  <BlurbEdit title="Edit Blurb" />
+                </ProtectedUserRoute>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="delete"
+            element={
+              <ProtectedRoute>
+                <ProtectedUserRoute>
+                  <BlurbDelete title="Delete Blurb" />
+                </ProtectedUserRoute>
+              </ProtectedRoute>
+            }
+          />
         </Route>
 
         <Route path="profile/:username" element={<ProfileLayout />}>
           <Route index element={<A />} />
           <Route path="blurb" element={<B />} />
+          <Route path="settings" element={<C />} />
         </Route>
 
         <Route path="*" element={<NoMatch title="Something went wrong" />} />

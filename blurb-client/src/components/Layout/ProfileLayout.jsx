@@ -3,15 +3,15 @@ import { Outlet } from 'react-router-dom';
 
 // import components
 import OvenLayout from './OvenLayout';
-import BlurbNavigation from '../Blurb/BlurbNavigation';
+import ProfileNavigation from '../Profile/ProfileNavigation';
 
-import { styleBlue } from './OvenLayoutStyle';
+import { styleOrange } from './OvenLayoutStyle';
 
 const ProfileLayout = () => {
   return (
     <OvenLayout
-      style={styleBlue}
-      leftChildren={<BlurbNavigation />}
+      style={styleOrange}
+      leftChildren={<ProfileNavigation />}
       rightChildren={<Outlet />}
     />
   );

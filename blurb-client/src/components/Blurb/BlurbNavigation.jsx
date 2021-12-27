@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 // import components
 import ProtectedComponent from '../Authentication/ProtectedComponent';
+import ProtectedUserComponent from '../Authentication/ProtectedUserComponent';
 import Avataar from '../Avataar/Avataar';
 import BlurbMeta from './BlurbMeta';
 import BlurbModify from './BlurbModify';
@@ -33,12 +34,14 @@ const BlurbNavigation = () => {
       </div>
       <div className="modify-detail-wrapper">
         <ProtectedComponent>
-          <div>
-            <Link to="" className="modify-info__link">
-              <strong>View Blurb Detail</strong>
-            </Link>
-          </div>
-          <BlurbModify />
+          <ProtectedUserComponent createdByUser="mohit">
+            <div>
+              <Link to="" className="modify-info__link">
+                <strong>View Blurb Detail</strong>
+              </Link>
+            </div>
+            <BlurbModify />
+          </ProtectedUserComponent>
         </ProtectedComponent>
       </div>
     </div>

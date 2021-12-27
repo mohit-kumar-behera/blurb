@@ -1,0 +1,27 @@
+.profile-navigation {
+  padding: 3.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.profile-navigation > .profile-navlink {
+  background-color: transparent;
+  border-left: 7px solid transparent;
+  padding: 0.7rem;
+  transition: all 0.3s ease;
+  text-align: start;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.profile-navigation > .profile-navlink:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+.profile-navigation > .profile-navlink:hover,
+.profile-navigation > .profile-navlink.active {
+  border-left: 7px solid white;
+  background-color: var(--white-antique-opac-m);
+}
+.profile-navigation > .profile-navlink.active {
+  pointer-events: none;
+}
