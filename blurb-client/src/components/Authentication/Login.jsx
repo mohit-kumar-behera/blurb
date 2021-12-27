@@ -8,6 +8,7 @@ import useDocumentTitle from '../../CustomHook/useDocumentTitle';
 
 // import components
 import FormField from './Fields/FormField';
+import SubmitBtn from './Fields/SubmitBtn';
 
 // import validators
 import emailPasswordValidation from './Validators/emailPassword';
@@ -15,11 +16,6 @@ import requiredFieldValidation from './Validators/requiredField';
 
 // import actions
 import { login } from '../../redux/actions/authAction';
-
-const actionBtnWrapperStyle = {
-  display: 'flex',
-  justifyContent: 'end',
-};
 
 const Login = props => {
   const navigate = useNavigate();
@@ -62,11 +58,7 @@ const Login = props => {
           label="Password"
           type="password"
         />
-        <div className="form-field" style={actionBtnWrapperStyle}>
-          <button type="submit" className="form-action-btn">
-            Log in
-          </button>
-        </div>
+        <SubmitBtn text="Log in" />
       </form>
     </>
   );

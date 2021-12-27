@@ -101,7 +101,7 @@
 }
 .modal-footer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .modal-action-btn {
   padding: 0.55rem 1.5rem;

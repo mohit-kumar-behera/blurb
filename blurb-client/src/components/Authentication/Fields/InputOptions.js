@@ -1,5 +1,6 @@
 // import components
 import Input from './Input';
+import TextArea from './TextArea';
 
 const inputComponents = {
   firstname: (
@@ -22,6 +23,15 @@ const inputComponents = {
   ),
   text: (
     <Input
+      type="text"
+      placeholder="Enter your text"
+      className="user-input"
+      spellCheck="false"
+      required
+    />
+  ),
+  textarea: (
+    <TextArea
       type="text"
       placeholder="Enter your text"
       className="user-input"

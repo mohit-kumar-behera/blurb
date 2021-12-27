@@ -1,10 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { connect } from 'react-redux';
-
-// import components
-
-// import actions
 
 // import stylesheets
 import './Modal.css';

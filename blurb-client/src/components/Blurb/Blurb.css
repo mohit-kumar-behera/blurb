@@ -82,7 +82,6 @@
 /* BLURB DETAIL VIEW */
 .blurb-navigation {
   padding: 4rem 0.7rem;
-  /* background: lightgreen; */
   text-align: center;
 }
 .blurb-navigation > *:not(:last-child) {
@@ -159,5 +158,5 @@
 }
 .blurb-detail-footer.content-right {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }

@@ -2,14 +2,13 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   width: 80%;
+  height: 80vh;
+  overflow-y: hidden;
   margin: 3rem auto;
   border: none;
   --border-radius: 7px;
   border-radius: var(--border-radius);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-  height: 80vh;
-  overflow-y: hidden;
 }
 .oven-layout > * {
   border-radius: var(--border-radius);
@@ -45,12 +44,13 @@
   .oven-layout {
     width: 100%;
     margin: 3rem auto;
-    grid-template-columns: 1.8fr 4fr;
+    grid-template-columns: 2fr 3.5fr;
   }
 }
 @media screen and (max-width: 576px) {
   .oven-layout {
     width: 100%;
+    height: 100%;
     margin: 2rem auto;
     grid-template-columns: 1fr;
   }

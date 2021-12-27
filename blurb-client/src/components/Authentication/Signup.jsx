@@ -1,21 +1,16 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { connect } from 'react-redux';
 
 // import custom hooks
 import useDocumentTitle from '../../CustomHook/useDocumentTitle';
 
 // import components
 import FormField from './Fields/FormField';
+import SubmitBtn from './Fields/SubmitBtn';
 
 // import validators
 import emailPasswordValidation from './Validators/emailPassword';
 import requiredFieldValidation from './Validators/requiredField';
-
-const actionBtnWrapperStyle = {
-  display: 'flex',
-  justifyContent: 'end',
-};
 
 const Signup = props => {
   useDocumentTitle(props.title);
@@ -66,11 +61,7 @@ const Signup = props => {
           label="Confirm Password"
           type="password"
         />
-        <div className="form-field" style={actionBtnWrapperStyle}>
-          <button type="submit" className="form-action-btn">
-            Sign up
-          </button>
-        </div>
+        <SubmitBtn text="sign up" />
       </form>
     </>
   );
