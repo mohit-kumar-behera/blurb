@@ -16,9 +16,16 @@ const blurbData = [
   },
   {
     id: Math.floor(Math.random() * 14575),
-    title: 'Shogun of Peace dsiufis idsfi dsfi ',
+    title: 'Shogun of Peace dsiufis idsfi dsfi',
     user: {
       name: 'Nettie Norman',
+    },
+  },
+  {
+    id: Math.floor(Math.random() * 14575),
+    title: 'SAME- Shogun of Peace dsiufis idsfi dsfi',
+    user: {
+      name: 'mohit',
     },
   },
   {

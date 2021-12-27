@@ -116,8 +116,14 @@
   margin-right: 0.2rem;
 }
 .modify-info__link {
+  padding: 0.2rem 0.4rem;
+  border-radius: 2.5px;
   transform: translate(0, 0);
   transition: all 0.3s ease;
+}
+.modify-info__link,
+.modify-info__link:not(:visited),
+.modify-info__link:visited {
   color: var(--green-light);
 }
 .modify-info__link:hover {
@@ -125,6 +131,11 @@
   transform: translate(2px, -2px);
   text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.modify-info__link.active {
+  color: var(--white);
+  pointer-events: none;
+  background-color: var(--white-antique-opac-m);
 }
 .blurb-detail-wrapper {
   padding: 4rem 2.5rem;

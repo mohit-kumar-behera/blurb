@@ -13,6 +13,7 @@ import Home from './Home/Home';
 import BlurbDetail from './Blurb/BlurbDetail';
 import BlurbEdit from './Blurb/BlurbEdit';
 import BlurbDelete from './Blurb/BlurbDelete';
+import ProfileLayout from './Layout/ProfileLayout';
 import NoMatch from './Error/NoMatch';
 
 // import stylesheets
@@ -80,14 +81,7 @@ const App = () => {
           <Route path="delete" element={<BlurbDelete title="Delete Blurb" />} />
         </Route>
 
-        <Route
-          path="user/:username"
-          element={
-            <ProtectedRoute>
-              <P />
-            </ProtectedRoute>
-          }
-        >
+        <Route path="profile/:username" element={<ProfileLayout />}>
           <Route index element={<A />} />
           <Route path="blurb" element={<B />} />
         </Route>

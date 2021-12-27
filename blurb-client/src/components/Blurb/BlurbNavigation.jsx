@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // import components
 import ProtectedComponent from '../Authentication/ProtectedComponent';
@@ -32,6 +33,11 @@ const BlurbNavigation = () => {
       </div>
       <div className="modify-detail-wrapper">
         <ProtectedComponent>
+          <div>
+            <Link to="" className="modify-info__link">
+              <strong>View Blurb Detail</strong>
+            </Link>
+          </div>
           <BlurbModify />
         </ProtectedComponent>
       </div>
