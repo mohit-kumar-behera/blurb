@@ -102,3 +102,9 @@ a:active {
 @media screen and (min-width: 372px) and (max-width: 576px) {}
 @media screen and (max-width: 372px) {}
 */
+div.hr {
+  padding: 0.08rem;
+  width: 100%;
+  background-color: var(--grey);
+  border-radius: 100px;
+}

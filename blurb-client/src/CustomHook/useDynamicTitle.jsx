@@ -8,7 +8,6 @@ const useDynamicTitle = (docTitle, type = URL_TYPE.BLURB) => {
   let titleFromSlug = '';
 
   if (type === URL_TYPE.BLURB) {
-    console.log('i m blurb');
     const slugFromParam = params.slug;
     titleFromSlug = slugFromParam.replace(/-/g, ' ');
   } else if (type === URL_TYPE.PROFILE) {

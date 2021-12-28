@@ -77,16 +77,8 @@
   font-family: var(--font-raleway);
   font-size: 2rem;
   font-weight: 900;
-
   text-transform: uppercase;
-  background: -webkit-linear-gradient(
-    left,
-    var(--orange-red),
-    var(--orange-amber),
-    var(--orange-red)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--black);
 }
 .ovenlayout-detail-body > p {
   font-size: 1.2rem;

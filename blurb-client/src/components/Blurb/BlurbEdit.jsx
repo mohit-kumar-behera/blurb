@@ -21,7 +21,7 @@ const BlurbEdit = props => {
   return (
     <div className="ovenlayout-detail-wrapper">
       <div className="ovenlayout-detail-header">
-        <h1>Edit Blurb</h1>
+        <h1 className="blurb-header">Edit Blurb</h1>
       </div>
       <div className="ovenlayout-detail-body">
         <BlurbForm initialValues={initialValues} />

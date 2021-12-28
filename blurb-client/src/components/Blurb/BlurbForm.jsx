@@ -5,6 +5,9 @@ import { Field, reduxForm } from 'redux-form';
 import FormField from '../Authentication/Fields/FormField';
 import SubmitBtn from '../Authentication/Fields/SubmitBtn';
 
+// import validators
+import requiredFieldValidation from '../Authentication/Validators/requiredField';
+
 const BlurbForm = props => {
   const submitHandler = formValues => {
     console.log('Submitted', formValues);
@@ -35,8 +38,16 @@ const BlurbForm = props => {
   );
 };
 
+const validate = formValues => {
+  const errors = {};
+  const requiredFields = ['blurbTitle', 'blurbContent'];
+  requiredFieldValidation(requiredFields, formValues, errors);
+  return errors;
+};
+
 const FormComponentWrapped = reduxForm({
   form: 'BlurbForm',
+  validate,
 })(BlurbForm);
 
 export default FormComponentWrapped;

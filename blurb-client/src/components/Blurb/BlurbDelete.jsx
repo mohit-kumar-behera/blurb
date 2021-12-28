@@ -12,7 +12,7 @@ const BlurbDelete = props => {
   return (
     <div className="ovenlayout-detail-wrapper">
       <div className="ovenlayout-detail-header">
-        <h1>Delete Blurb</h1>
+        <h1 className="blurb-header">Delete Blurb</h1>
       </div>
       <div className="ovenlayout-detail-body">
         <p>

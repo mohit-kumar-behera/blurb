@@ -12,7 +12,7 @@ const BlurbDetail = props => {
   return (
     <div className="ovenlayout-detail-wrapper">
       <div className="ovenlayout-detail-header">
-        <h1>apostle of worship</h1>
+        <h1 className="blurb-header">apostle of worship</h1>
       </div>
       <div className="ovenlayout-detail-body">
         <p>
