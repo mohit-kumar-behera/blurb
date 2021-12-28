@@ -3,20 +3,23 @@ import React from 'react';
 // import customHook
 import useDynamicTitle from '../../CustomHook/useDynamicTitle';
 
+// import stylesheets
+import '../Layout/OvenLayout.css';
+
 const BlurbDelete = props => {
   useDynamicTitle(props.title);
 
   return (
-    <div className="blurb-detail-wrapper">
-      <div className="blurb-detail-header">
+    <div className="ovenlayout-detail-wrapper">
+      <div className="ovenlayout-detail-header">
         <h1>Delete Blurb</h1>
       </div>
-      <div className="blurb-detail-body">
+      <div className="ovenlayout-detail-body">
         <p>
           <strong>Are you sure you want to delete Apostle Of Worship ?</strong>
         </p>
       </div>
-      <div className="blurb-detail-footer content-right">
+      <div className="ovenlayout-detail-footer content-right">
         <button
           className="modal-action-btn danger"
           onClick={() => console.log('delete blurb')}

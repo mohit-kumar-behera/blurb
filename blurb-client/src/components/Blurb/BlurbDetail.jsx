@@ -3,15 +3,18 @@ import React from 'react';
 // import customHook
 import useDynamicTitle from '../../CustomHook/useDynamicTitle';
 
+// import stylesheets
+import '../Layout/OvenLayout.css';
+
 const BlurbDetail = props => {
   useDynamicTitle(props.title);
 
   return (
-    <div className="blurb-detail-wrapper">
-      <div className="blurb-detail-header">
+    <div className="ovenlayout-detail-wrapper">
+      <div className="ovenlayout-detail-header">
         <h1>apostle of worship</h1>
       </div>
-      <div className="blurb-detail-body">
+      <div className="ovenlayout-detail-body">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum

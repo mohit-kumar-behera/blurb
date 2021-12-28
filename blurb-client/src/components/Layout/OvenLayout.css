@@ -61,3 +61,39 @@
     border-radius: 0 0 var(--border-radius) var(--border-radius);
   }
 }
+
+/* Content for Oven Layout (Right Section) */
+.ovenlayout-detail-wrapper {
+  padding: 4rem 2.5rem;
+}
+.ovenlayout-detail-wrapper > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.ovenlayout-detail-header {
+  text-align: center;
+  text-transform: capitalize;
+}
+.ovenlayout-detail-header > h1 {
+  font-family: var(--font-raleway);
+  font-size: 2rem;
+  font-weight: 900;
+
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(
+    left,
+    var(--orange-red),
+    var(--orange-amber),
+    var(--orange-red)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ovenlayout-detail-body > p {
+  font-size: 1.2rem;
+  word-spacing: 2px;
+  line-height: 1.5;
+}
+.ovenlayout-detail-footer.content-right {
+  display: flex;
+  justify-content: flex-end;
+}

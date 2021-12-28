@@ -6,6 +6,9 @@ import BlurbForm from './BlurbForm';
 // import customHook
 import useDynamicTitle from '../../CustomHook/useDynamicTitle';
 
+// import stylesheets
+import '../Layout/OvenLayout.css';
+
 const BlurbEdit = props => {
   useDynamicTitle(props.title);
 
@@ -16,11 +19,11 @@ const BlurbEdit = props => {
   };
 
   return (
-    <div className="blurb-detail-wrapper">
-      <div className="blurb-detail-header">
+    <div className="ovenlayout-detail-wrapper">
+      <div className="ovenlayout-detail-header">
         <h1>Edit Blurb</h1>
       </div>
-      <div className="blurb-detail-body">
+      <div className="ovenlayout-detail-body">
         <BlurbForm initialValues={initialValues} />
       </div>
     </div>

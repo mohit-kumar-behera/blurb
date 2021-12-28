@@ -15,6 +15,7 @@ import BlurbDetail from './Blurb/BlurbDetail';
 import BlurbEdit from './Blurb/BlurbEdit';
 import BlurbDelete from './Blurb/BlurbDelete';
 import ProfileLayout from './Layout/ProfileLayout';
+import ProfileBlurb from './Profile/ProfileBlurb';
 import NoMatch from './Error/NoMatch';
 
 // import stylesheets
@@ -101,7 +102,7 @@ const App = () => {
 
         <Route path="profile/:username" element={<ProfileLayout />}>
           <Route index element={<A />} />
-          <Route path="blurb" element={<B />} />
+          <Route path="blurb" element={<ProfileBlurb title="All Blurbs" />} />
           <Route
             path="settings"
             element={
